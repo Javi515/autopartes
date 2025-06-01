@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="cart">
+    <div class="container">
+        <div class="cart__about">
+            <div class="cart__text">Carrito</div>
+        </div>
+    </div>
+</section>
+
+<section class="cartt">
+    <div class="container">
+        <div class="dash__row">
+            <div class="col-md-12">
+                <h2>Carrito del usuario {{ user.username }}</h2>
+                <p>Aquí se muestra la lista de productos que has agregado al carrito</p>
+                {% if orders %}
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Precio</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for order in orders %}
+                            <tr>
+                                <td>{{ order.id }}</td>
+                                <td>{{ order.autopart }}</td>
+                                <td>{{ order.count }}</td>
+                                <td>{{ order.price }} $</td>
+                                <td><a class="button__table" href="{% url 'autopart_detail' order.autopart_url %}">Ver producto</a></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>No has agregado ningún producto al carrito</p>
+                {% endif %}
+                <div class="checkout">
+                    <a class="button__checkout" href="#">Realizar pedido</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

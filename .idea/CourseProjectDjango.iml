@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+
+  <!-- Configuración de Django para el proyecto -->
+  <component name="FacetManager">
+    <facet type="django" name="Django">
+      <configuration>
+        <!-- Carpeta raíz del proyecto -->
+        <option name="rootFolder" value="$MODULE_DIR$" />
+        <!-- Ruta al archivo de configuración de Django -->
+        <option name="settingsModule" value="Autoparts/settings.py" />
+        <!-- Script de gestión de Django -->
+        <option name="manageScript" value="manage.py" />
+        <!-- Entorno (vacío por defecto) -->
+        <option name="environment" value="&lt;map/&gt;" />
+        <!-- Indica si se debe evitar usar el test runner por defecto -->
+        <option name="doNotUseTestRunner" value="false" />
+        <!-- Patrón de archivos a rastrear (migraciones) -->
+        <option name="trackFilePattern" value="migrations" />
+      </configuration>
+    </facet>
+  </component>
+
+  <!-- Configuración de rutas del proyecto -->
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <!-- Carpeta del entorno virtual excluida -->
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <!-- Usa el JDK heredado del proyecto -->
+    <orderEntry type="inheritedJdk" />
+    <!-- Marca esta carpeta como fuente de código -->
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+
+  <!-- Plantillas configuradas como Django -->
+  <component name="TemplatesService">
+    <option name="TEMPLATE_CONFIGURATION" value="Django" />
+  </component>
+
+  <!-- Sistema de pruebas configurado para usar unittest -->
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+
+</module>

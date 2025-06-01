@@ -1,0 +1,67 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <!-- Configuración para PostgreSQL PLSQL -->
+    <DBN-PSQL>
+      <case-options enabled="true">
+        <!-- Palabras clave en minúsculas -->
+        <option name="KEYWORD_CASE" value="lower" />
+        <!-- Nombres de funciones en minúsculas -->
+        <option name="FUNCTION_CASE" value="lower" />
+        <!-- Parámetros en minúsculas -->
+        <option name="PARAMETER_CASE" value="lower" />
+        <!-- Tipos de datos en minúsculas -->
+        <option name="DATATYPE_CASE" value="lower" />
+        <!-- Objetos (nombres) se mantienen como están -->
+        <option name="OBJECT_CASE" value="preserve" />
+      </case-options>
+      <!-- Formato desactivado -->
+      <formatting-settings enabled="false" />
+    </DBN-PSQL>
+
+    <!-- Configuración para SQL estándar -->
+    <DBN-SQL>
+      <case-options enabled="true">
+        <option name="KEYWORD_CASE" value="lower" />
+        <option name="FUNCTION_CASE" value="lower" />
+        <option name="PARAMETER_CASE" value="lower" />
+        <option name="DATATYPE_CASE" value="lower" />
+        <option name="OBJECT_CASE" value="preserve" />
+      </case-options>
+      <formatting-settings enabled="false">
+        <!-- Espaciado: todo en una línea -->
+        <option name="STATEMENT_SPACING" value="one_line" />
+        <!-- Saltar líneas en cláusulas si la sentencia es muy larga -->
+        <option name="CLAUSE_CHOP_DOWN" value="chop_down_if_statement_long" />
+        <!-- Romper elementos iterativos si no es uno solo -->
+        <option name="ITERATION_ELEMENTS_WRAPPING" value="chop_down_if_not_single" />
+      </formatting-settings>
+    </DBN-SQL>
+
+    <!-- Repetidos por algún motivo (puede ser automático del IDE) -->
+    <DBN-PSQL>
+      <case-options enabled="true">
+        <option name="KEYWORD_CASE" value="lower" />
+        <option name="FUNCTION_CASE" value="lower" />
+        <option name="PARAMETER_CASE" value="lower" />
+        <option name="DATATYPE_CASE" value="lower" />
+        <option name="OBJECT_CASE" value="preserve" />
+      </case-options>
+      <formatting-settings enabled="false" />
+    </DBN-PSQL>
+
+    <DBN-SQL>
+      <case-options enabled="true">
+        <option name="KEYWORD_CASE" value="lower" />
+        <option name="FUNCTION_CASE" value="lower" />
+        <option name="PARAMETER_CASE" value="lower" />
+        <option name="DATATYPE_CASE" value="lower" />
+        <option name="OBJECT_CASE" value="preserve" />
+      </case-options>
+      <formatting-settings enabled="false">
+        <option name="STATEMENT_SPACING" value="one_line" />
+        <option name="CLAUSE_CHOP_DOWN" value="chop_down_if_statement_long" />
+        <option name="ITERATION_ELEMENTS_WRAPPING" value="chop_down_if_not_single" />
+      </formatting-settings>
+    </DBN-SQL>
+  </code_scheme>
+</component>

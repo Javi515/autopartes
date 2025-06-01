@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="cart">
+    <div class="container">
+        <div class="cart__about">
+            <div class="cart__text">Panel de usuario</div>
+        </div>
+    </div>
+</section>
+
+<section class="dashboard">
+    <div class="container">
+        <div class="dash__row">
+            <div class="col-md-12">
+                <form action="{% url 'dashboard' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% include 'include/_alerts.html' %}
+                    {% for detail in users %}
+                    <h2>Perfil de usuario {{ user.username }}</h2>
+                    {% if detail.photo %}
+                    <img src="{{ detail.photo.url }}">
+                    {% endif %}
+                    <div>
+                        <a>Cambiar foto</a>
+                        <div><input type="file" name="photo" value="detail.photo"></div>
+                        <h4 style="color:#008B8B; padding: 6px; font-size: large;">Nombre: {{ detail.first_name }}</h4>
+                    </div>
+                    <a>Nuevo nombre</a>
+                    <div><input class="dash-input" name="first_name" type="text" value="{{ detail.first_name }}"></div>
+                    <h4 style="color:#008B8B; padding: 6px; font-size: large;">Apellido: {{ detail.last_name }}</h4>
+                    <a>Nuevo apellido</a>
+                    <div><input class="dash-input" name="last_name" type="text" value="{{ detail.last_name }}"></div>
+                    <h4 style="color:#008B8B; padding: 6px; font-size: large;">Correo electrónico: {{ detail.email }}</h4>
+                    <a>Nuevo correo</a>
+                    <div><input class="dash-input" name="email" type="text" value="{{ detail.email }}"></div>
+                    {% if detail.individual == True %}
+                    <h4 style="color:#008B8B; padding: 6px; font-size: large;">Tipo de usuario:</h4>
+                    <div class="status__radio">
+                        <input class="status__radio" type="radio" name="individual" value="False">
+                        <label for="false">Persona jurídica</label><br>
+                        <input class="status__radio" type="radio" name="individual" value="True" checked
+                               style="margin-left: 20px;">
+                        <label for="true">Persona individual</label>
+                    </div>
+                    {% else %}
+                    <h4 style="color:#008B8B; padding: 6px; font-size: large;">Tipo de usuario:</h4>
+                    <input class="status__radio" type="radio" name="individual" value="False" checked
+                           style="margin-left: 20px;">
+                    <label for="false">Persona jurídica</label><br>
+                    <input class="status__radio" type="radio" name="individual" value="True">
+                    <label for="true">Persona individual</label>
+                    {% endif %}
+                    {% endfor %}
+                    <input type="hidden" name="user_id" value="{{ user.id }}">
+                    <div class="div-dash-button">
+                        <button class="dash-button">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

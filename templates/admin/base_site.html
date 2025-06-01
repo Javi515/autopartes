@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <h1 id="head">
+        <img src="{% static 'img/logo60.png' %}" alt="Tienda en línea de autopartes" class="brand_img">
+        Panel de administración
+    </h1>
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
